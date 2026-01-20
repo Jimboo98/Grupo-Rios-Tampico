@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Suministros de Construcción e industriales - Soluciones confiables para la operación industrial.">
+    <title>Suministros de Construcción e industriales | Grupo Ríos Tampico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2b3f4e',
+                        'primary-dark': '#1f2f3d',
+                        accent: '#c47a3d',
+                        sand: '#f7f3ec',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo/optimized/webp/CSRios Logo sin fondo-opt.webp" alt="Grupo Ríos Tampico" class="h-12 w-auto">
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold text-primary uppercase tracking-wide">Grupo Ríos Tampico</span>
+                        <span class="text-sm text-gray-500">Soluciones integrales</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-600 font-semibold hover:text-primary transition">Inicio</a>
+                    <a href="el-grupo.html" class="text-gray-600 font-semibold hover:text-primary transition">El Grupo</a>
+                    <div class="relative group">
+                        <button class="text-primary font-semibold hover:text-accent transition flex items-center">
+                            Divisiones
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="divisiones.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Ver todas las divisiones</a>
+                            <hr class="border-gray-200">
+                            <a href="suministros-industriales.html" class="block px-4 py-3 text-sm font-semibold text-primary hover:bg-sand transition">Suministros de Construcción</a>
+                            <a href="consultoria-logistica.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Consultoría Logística</a>
+                            <a href="desarrollo-inmobiliario.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Desarrollo Inmobiliario</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contacto.html" class="bg-primary text-white px-5 py-2 rounded-lg font-bold hover:bg-primary-dark transition">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-4">División</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Suministros de Construcción</h1>
+                <p class="text-xl md:text-2xl text-gray-200">
+                    Soluciones confiables para proyectos de construcción.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qué Hacemos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Qué hacemos</h2>
+                <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto mb-12">
+                    Abastecimiento de insumos, equipos y soluciones industriales para proyectos, mantenimiento y operación. 
+                    Trabajamos con marcas líderes y ofrecemos soporte técnico especializado para garantizar continuidad operativa.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Herramientas</h3>
+                        <p class="text-gray-600">Equipos y herramientas industriales de alta precisión</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.07 2.572-1.065z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Maquinaria</h3>
+                        <p class="text-gray-600">Equipos industriales para manufactura y producción</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Consumibles</h3>
+                        <p class="text-gray-600">Insumos y materiales para operación continua</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión de la División -->
+    <section class="py-16 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent rounded-xl p-10">
+                    <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Misión de la División</p>
+                    <p class="text-gray-800 text-xl md:text-2xl leading-relaxed font-semibold">
+                        "Proveer materiales, herramientas y equipos de construcción de marcas líderes que garanticen calidad, 
+                        seguridad y resultados confiables en cada proyecto."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Trabajamos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Cómo trabajamos</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">1</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Análisis de requerimientos</h3>
+                                <p class="text-gray-600">
+                                    Evaluamos necesidades técnicas, volúmenes y especificaciones operativas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">2</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Selección de proveedores</h3>
+                                <p class="text-gray-600">
+                                    Conectamos con marcas certificadas y aliados estratégicos de confianza.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">3</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Suministro oportuno</h3>
+                                <p class="text-gray-600">
+                                    Entrega coordinada y puntual con logística rastreada.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">4</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Soporte técnico</h3>
+                                <p class="text-gray-600">
+                                    Acompañamiento post-venta y asesoría especializada continua.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marcas -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Marcas con las que trabajamos</h2>
+                    <p class="text-gray-600 text-lg">Productos de fabricantes líderes a nivel mundial.</p>
+                </div>
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-6 items-center">
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/HyundaiPowerLogo.png" alt="Hyundai Power" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/dewalt-seeklogo.png" alt="DeWalt" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/makita-seeklogo.png" alt="Makita" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/bomag-seeklogo.png" alt="Bomag" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/TDK-Machinery.png" alt="TDK Machinery" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/cropped-LGMG-LOGO-01.png" alt="LGMG" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/Hangcha.png" alt="Hangcha" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/GRUPEL.png" alt="Grupel" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/Miller.png" alt="Miller" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/esab-seeklogo.png" alt="ESAB" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/Axtech-logo.png" alt="Axtech" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/SIMPEDIL_LOGO_YELLOW_HP.png" alt="Simpedil" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/cinasa-logo.png" alt="Cinasa" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/ITALTOWER-1.png" alt="Italtower" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/Logo-Husky-negro-y-rojo-01.png" alt="Husky" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/logos-marcas_NITRO.png" alt="Nitro" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/shindaiwa-logo_0-1-2.png" alt="Shindaiwa" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/top_logo.png" alt="Top" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/victor-technologies-logo-6052CF4EDC-seeklogo.com.png" alt="Victor Technologies" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/weston-tools-seeklogo.png" alt="Weston Tools" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                    <div class="flex items-center justify-center p-4 bg-white rounded-lg border border-gray-200 hover:shadow-lg transition h-24">
+                        <img src="marcas con las que trabajamos/otros-fabricantes-01-05-1024x461.png" alt="Otros fabricantes" class="max-h-16 max-w-full object-contain grayscale hover:grayscale-0 transition">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería de Productos -->
+    <section class="py-16 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Equipos y herramientas</h2>
+                    <p class="text-gray-600 text-lg">Muestra de nuestro catálogo de suministros de construcción.</p>
+                </div>
+                <div id="productGallery" class="grid md:grid-cols-3 lg:grid-cols-4 gap-6">
+                    <!-- Se llenarán dinámicamente con JavaScript -->
+                </div>
+                <div class="text-center mt-10">
+                    <button onclick="loadRandomProducts()" class="bg-primary text-white px-8 py-3 rounded-lg font-bold hover:bg-primary-dark transition shadow-lg">
+                        Ver más productos
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Lista de todas las imágenes disponibles
+        const allProducts = [
+            "Allanadora Doble TDKA9200.webp",
+            "Asfaltadoras BF600C-3C.webp",
+            "Bailarina Impact700.webp",
+            "Bomba de Agua Electrica HKW5125.webp",
+            "Bomba de concreto Hercules118.webp",
+            "Camiones Articulados DA30.webp",
+            "Canteadora Electrica HKC106.webp",
+            "Careta de proteccion HYWH-350.webp",
+            "Cargadores frontales DL320A-7M.webp",
+            "Cargadores frontales SD200.webp",
+            "Compresor Eléctrico TWISTER12.webp",
+            "Cortadora de concreto TDK350-KR67.webp",
+            "Demoledor a gasolina  HKMD4500.webp",
+            "Desmalezadora RLD2600D.webp",
+            "Dobladoras REBAR58.webp",
+            "Estuche de herramientas ST-E133.webp",
+            "Excavadora sobre orugas DX222LCA-7M.webp",
+            "Excavadora sobre orugas DX800LC.webp",
+            "Excavadoras DX55.webp",
+            "Fumigadora de parihuela con motor a gasolina.webp",
+            "Fumigadora Eléctrica TechnoLancer.webp",
+            "Generador Electrico G0031GRGR.webp",
+            "Generador Portatil HYE4000IA.webp",
+            "Generador TITAN10500I.webp",
+            "Hidrolavadora STORM2000.webp",
+            "Hyundai HYWSC750 bombeo y riego.webp",
+            "Kit de compresor electrico HYAC50DK.webp",
+            "Kit de herramientas inalambricas HYKTAI20.webp",
+            "Kit de mini compresor HYAC15.webp",
+            "Kit Pistola de Impacto HYPN002.webp",
+            "Maquiona de pintura Stallion STAR650.webp",
+            "Mini Cargador MG1100.webp",
+            "Moto Niveladora DG190.webp",
+            "Motobombas HKW3325.webp",
+            "Motor para bailarina HYGEB400.webp",
+            "Motores HYGC700.webp",
+            "NEBULIZADORAS TERMOBARRET.webp",
+            "Pinta Rayas Matisse.webp",
+            "Pistola para soldar STINGER.webp",
+            "Placa compactadora HYPC3000.webp",
+            "Retro Excavadora B90C.webp",
+            "Revolvedora de concreto NXR1SH930.webp",
+            "Rodillo para Zanjas BPM8500.webp",
+            "Rodillo Vibrador TDKR2700.webp",
+            "Rodillo Vibrador TDKR950.webp",
+            "Sierra Caladora HXJS-350.webp",
+            "Sierra Circular Inalambrica HYCCS20.webp",
+            "Sierra de inglete HXMS15.webp",
+            "Sierra sable HYRS20.webp",
+            "Simpedil Piegafierro.webp",
+            "Soldadora Kaizer130.webp",
+            "Soldadora TIG Kaizer130.webp",
+            "Torre de iluminacion Fenix Pro25.webp",
+            "Torre de luz SL433IDG.webp",
+            "Torre de luz TDKTL6000.webp",
+            "Vibrador de concreto DYNA125.webp",
+            "VibroCompactador BW211D-40.webp"
+        ];
+
+        // Función para obtener nombre limpio del producto
+        function getProductName(filename) {
+            return filename.replace('.webp', '').replace(/\s+/g, ' ').trim();
+        }
+
+        // Función para seleccionar productos aleatorios
+        function getRandomProducts(count) {
+            const shuffled = [...allProducts].sort(() => Math.random() - 0.5);
+            return shuffled.slice(0, count);
+        }
+
+        // Función para cargar productos en la galería
+        function loadRandomProducts() {
+            const gallery = document.getElementById('productGallery');
+            const selectedProducts = getRandomProducts(12);
+            
+            gallery.innerHTML = selectedProducts.map(product => `
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                    <div class="h-64 flex items-center justify-center bg-gray-50 p-4">
+                        <img src="media/gallery/optimized/${product}" 
+                             alt="${getProductName(product)}" 
+                             class="max-h-full max-w-full object-contain">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-sm font-semibold text-primary line-clamp-2">${getProductName(product)}</h3>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        // Cargar productos al cargar la página
+        loadRandomProducts();
+    </script>
+
+    <!-- Catálogos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4">Catálogos descargables</h2>
+                    <p class="text-gray-600 text-lg">Consulta nuestro portafolio completo de productos.</p>
+                </div>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <a href="Catalogos/optimized/Catalogo Rios.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">Catálogo Ríos</h3>
+                                <p class="text-sm text-gray-600">Productos generales</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/hyundai.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">Hyundai</h3>
+                                <p class="text-sm text-gray-600">Herramientas y equipos</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/TONKA Catalogo.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">TONKA</h3>
+                                <p class="text-sm text-gray-600">Equipamiento industrial</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/AXTech Catalogo.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">AXTech</h3>
+                                <p class="text-sm text-gray-600">Tecnología y herramientas</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/AX Guantes.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">AX Guantes</h3>
+                                <p class="text-sm text-gray-600">Equipo de protección</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/alp C.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">ALP C</h3>
+                                <p class="text-sm text-gray-600">Catálogo especializado</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/CATALOGO GenMANN CUMMINS.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">GenMANN Cummins</h3>
+                                <p class="text-sm text-gray-600">Plantas eléctricas</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/CATALOGO GenMANN JOHN DEERE.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">GenMANN John Deere</h3>
+                                <p class="text-sm text-gray-600">Plantas eléctricas</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/FOLLETO PLANTAS ELÉCTRICAS GenMANN 2025.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">Plantas Eléctricas GenMANN 2025</h3>
+                                <p class="text-sm text-gray-600">Folleto actualizado</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/catalogo vrMlight-Rios.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">vrMlight Ríos</h3>
+                                <p class="text-sm text-gray-600">Iluminación especializada</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="Catalogos/optimized/mexiplast.pdf" target="_blank" class="bg-white rounded-xl p-6 border border-gray-200 hover:shadow-xl transition group">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                                </svg>
+                            </div>
+                            <div class="flex-1">
+                                <h3 class="font-bold text-primary group-hover:text-accent transition">Mexiplast</h3>
+                                <p class="text-sm text-gray-600">Productos plásticos</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relación con el Grupo -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Parte de Grupo Ríos Tampico</h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                    Esta división forma parte de Grupo Ríos Tampico, operando con autonomía técnica pero con 
+                    coordinación estratégica desde el grupo. Esto nos permite ofrecer soluciones integrales 
+                    combinando Suministros de Construcción e industriales con consultoría logística y desarrollo inmobiliario 
+                    cuando el cliente lo requiere.
+                </p>
+                <a href="index.html" class="inline-flex items-center text-accent font-bold hover:text-primary transition">
+                    Conocer el grupo completo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Necesitas suministro industrial confiable?</h2>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Conéctate con nuestro equipo de especialistas y recibe una cotización personalizada.
+            </p>
+            <a href="contacto.html?division=suministros" class="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
+                Contactar esta división
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Grupo Ríos Tampico</h3>
+                    <p class="text-sm italic mb-4">"Construyendo eficiencia, suministrando calidad."</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Divisiones</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="suministros-industriales.html" class="text-accent hover:text-white transition">Suministros de Construcción</a></li>
+                        <li><a href="consultoria-logistica.html" class="hover:text-accent transition">Consultoría Logística</a></li>
+                        <li><a href="desarrollo-inmobiliario.html" class="hover:text-accent transition">Desarrollo Inmobiliario</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:franciscorios@gruporiostampico.com" class="hover:text-accent transition">franciscorios@gruporiostampico.com</a></li>
+                        <li><a href="tel:+525536463621" class="hover:text-accent transition">+52 55 3646 3621</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <p class="text-sm mb-3">Operado por Arrendamientos y Construcciones de Tampico.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-accent transition">Aviso de privacidad</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                <p>© 2026 Grupo Ríos Tampico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

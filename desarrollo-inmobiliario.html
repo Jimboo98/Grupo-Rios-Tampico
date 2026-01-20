@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Desarrollo Inmobiliario - Proyectos habitacionales y comerciales de alto impacto.">
+    <title>Desarrollo Inmobiliario | Grupo Ríos Tampico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2b3f4e',
+                        'primary-dark': '#1f2f3d',
+                        accent: '#c47a3d',
+                        sand: '#f7f3ec',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo/optimized/webp/CSRios Logo sin fondo-opt.webp" alt="Grupo Ríos Tampico" class="h-12 w-auto">
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold text-primary uppercase tracking-wide">Grupo Ríos Tampico</span>
+                        <span class="text-sm text-gray-500">Soluciones integrales</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-600 font-semibold hover:text-primary transition">Inicio</a>
+                    <a href="el-grupo.html" class="text-gray-600 font-semibold hover:text-primary transition">El Grupo</a>
+                    <div class="relative group">
+                        <button class="text-primary font-semibold hover:text-accent transition flex items-center">
+                            Divisiones
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="divisiones.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Ver todas las divisiones</a>
+                            <hr class="border-gray-200">
+                            <a href="suministros-industriales.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Suministros de Construcción</a>
+                            <a href="consultoria-logistica.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Consultoría Logística</a>
+                            <a href="desarrollo-inmobiliario.html" class="block px-4 py-3 text-sm font-semibold text-primary hover:bg-sand transition">Desarrollo Inmobiliario</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contacto.html" class="bg-primary text-white px-5 py-2 rounded-lg font-bold hover:bg-primary-dark transition">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-4">División</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Desarrollo Inmobiliario</h1>
+                <p class="text-xl md:text-2xl text-gray-200">
+                    Proyectos habitacionales y comerciales de alto impacto.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qué Desarrollamos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Qué desarrollamos</h2>
+                <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto mb-12">
+                    Proyectos habitacionales y comerciales con diseño funcional, estética moderna y construcción de alta calidad 
+                    en alianza con expertos del sector. Gestionamos desde concepto hasta entrega llave en mano.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Habitacional</h3>
+                        <p class="text-gray-600">Viviendas funcionales con espacios optimizados y acabados de calidad</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Comercial</h3>
+                        <p class="text-gray-600">Espacios para oficinas, retail y servicios con diseño corporativo</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Proyectos especiales</h3>
+                        <p class="text-gray-600">Desarrollos mixtos y soluciones inmobiliarias personalizadas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión de la División -->
+    <section class="py-16 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent rounded-xl p-10">
+                    <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Misión de la División</p>
+                    <p class="text-gray-800 text-xl md:text-2xl leading-relaxed font-semibold">
+                        "Desarrollar espacios habitacionales y comerciales con diseño funcional, estética moderna y 
+                        construcción de alta calidad en alianza con expertos del sector."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enfoque de Proyecto -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Enfoque de proyecto</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">1</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Concepto y viabilidad</h3>
+                                <p class="text-gray-600">
+                                    Análisis de mercado, ubicación y viabilidad financiera del proyecto.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">2</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Diseño arquitectónico</h3>
+                                <p class="text-gray-600">
+                                    Planos funcionales con estética contemporánea y uso eficiente del espacio.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">3</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Gestión de construcción</h3>
+                                <p class="text-gray-600">
+                                    Coordinación de contratistas, proveedores y cumplimiento de plazos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">4</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Entrega llave en mano</h3>
+                                <p class="text-gray-600">
+                                    Proyecto completo con acabados, instalaciones y documentación legal.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Diferenciadores -->
+    <section class="py-16 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Nuestros diferenciadores</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl border border-gray-200 p-8">
+                        <h3 class="font-bold text-primary text-lg mb-3">Diseño funcional</h3>
+                        <p class="text-gray-600">
+                            Espacios que maximizan utilidad, iluminación natural y flujos de circulación eficientes.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-200 p-8">
+                        <h3 class="font-bold text-primary text-lg mb-3">Calidad ejecutiva</h3>
+                        <p class="text-gray-600">
+                            Materiales certificados, acabados de primer nivel y supervisión técnica constante.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-200 p-8">
+                        <h3 class="font-bold text-primary text-lg mb-3">Alianzas estratégicas</h3>
+                        <p class="text-gray-600 mb-4">
+                            Red de arquitectos, ingenieros y constructores con trayectoria probada en la región.
+                        </p>
+                        <p class="text-sm text-gray-500 italic">
+                            En colaboración con <a href="https://instagram.com/escobar.arquitectura" target="_blank" class="text-accent hover:text-primary transition font-medium">@escobar.arquitectura</a> para proyectos de diseño especializado.
+                        </p>
+                    </div>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-4 text-center">Proyectos realizados</h2>
+                <p class="text-center text-gray-600 mb-8">En colaboración con <a href="https://instagram.com/escobar.arquitectura" target="_blank" class="text-accent hover:text-primary font-semibold">@escobar.arquitectura</a></p>
+                <div id="instagramGallery" class="grid md:grid-cols-3 gap-6">
+                    <!-- Las imágenes se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relación con el Grupo -->
+    <section class="py-16 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Parte de Grupo Ríos Tampico</h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                    Esta división forma parte de Grupo Ríos Tampico, operando con gestión propia pero con 
+                    coordinación estratégica desde el grupo. Esto nos permite integrar desarrollo inmobiliario 
+                    con Suministros de Construcción e industriales y consultoría logística cuando se requieren soluciones completas.
+                </p>
+                <a href="index.html" class="inline-flex items-center text-accent font-bold hover:text-primary transition">
+                    Conocer el grupo completo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Tienes un proyecto inmobiliario en mente?</h2>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Platiquemos sobre tu visión y evaluemos juntos la viabilidad y alcance.
+            </p>
+            <a href="contacto.html?division=inmobiliario" class="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
+                Contactar esta división
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Grupo Ríos Tampico</h3>
+                    <p class="text-sm italic mb-4">"Construyendo eficiencia, suministrando calidad."</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Divisiones</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="suministros-industriales.html" class="hover:text-accent transition">Suministros de Construcción</a></li>
+                        <li><a href="consultoria-logistica.html" class="hover:text-accent transition">Consultoría Logística</a></li>
+                        <li><a href="desarrollo-inmobiliario.html" class="text-accent hover:text-white transition">Desarrollo Inmobiliario</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:nallelybello@gruporiostampico.com" class="hover:text-accent transition">nallelybello@gruporiostampico.com</a></li>
+                        <li><a href="tel:+525536463621" class="hover:text-accent transition">+52 55 3646 3621</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <p class="text-sm mb-3">Operado por Arrendamientos y Construcciones de Tampico.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-accent transition">Aviso de privacidad</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                <p>© 2026 Grupo Ríos Tampico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Array con URLs de imágenes de proyectos de @escobar.arquitectura
+        const instagramImages = [
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t51.71878-15/475983642_1728857748056150_2071623159410806404_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzU1Nzk1NzkwOTExMDA1MzI0Mg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=8XBePrOGDQ0Q7kNvwHdJ9qF&_nc_oc=Admllj0jbVuFRDFvobo7rAgVsiZzP4K5NRyeZMG-rt47uPgH9xdu4VCHFpZvPdjUNEW22dI_hSGcOQBcfmT9NT0C&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_Afqv6O4WLAiaOnXQhUcxKxammgyGHmjSO8fyIdwEc0XQtA&oe=6974EACA',
+                title: 'Casa Tulum 28',
+                location: 'Lomas de Angelópolis, Puebla'
+            },
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t51.82787-15/590417443_17910999285260567_5947978937739214981_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=100&ig_cache_key=Mzc4NDc2ODE2NzA1NTgzODc4NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEyNDh4ODMyLnNkci5DMyJ9&_nc_ohc=wHWXTgd4ungQ7kNvwH7snrk&_nc_oc=AdnSgYB33zXDEJ7kUrUIin8Mv7fDSTKxLqiurrT8ZLP-MPqsUfIEd8oHMVM7nJn47k1qfkriPCtWvkU7TvU_j5Hk&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_AfobdJBxbiHRmeHnQ4xinwsFi082Omnb-q20o09vuOEz_A&oe=6974F801',
+                title: 'Proyecto Rio Verde',
+                location: 'San Luis Potosí'
+            },
+            {
+                url: 'https://instagram.fntr10-2.fna.fbcdn.net/v/t39.30808-6/449162353_17842779261260567_4925494262869252553_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=111&ig_cache_key=MzQwNTA3MjUwMzcyODY2MDk4OQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTQ4OC5zZHIuQzMifQ%3D%3D&_nc_ohc=eheuiUSmaDoQ7kNvwG2du2q&_nc_oc=AdmOuyc37DVqR8q_C9GTHDOYMFeeOa3Yv2c-Cs100nD3jic7gqwJzDnw92rLbA91wfH7WixkYnc18nI-gkDdh04L&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-2.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_AfoyZQqZUl30RWH-2zj-3WETckXGKGQ8SxjmFlka2Ndrfw&oe=6974D05F',
+                title: 'Edificio Uso Mixto',
+                location: 'Tlapa, Guerrero'
+            },
+            {
+                url: 'https://instagram.fntr10-2.fna.fbcdn.net/v/t51.71878-15/618739696_1175944018020206_4283216672829720809_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=106&ig_cache_key=MzgxMjQ5MTI2NTEzMzI2Mjk4MQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=R-q3-SQVxswQ7kNvwHMJcCP&_nc_oc=AdlVM2knL8M46rL6Xyid5HT2f5gvChxmm6YXYM3XsLl9tdqxgJk-pobjnJQDpm4q-CvLlXlNvqTXfa2InYE9Teyx&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-2.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_AfqmdZ6RcwyH_1DPw2CpJxRkUZCCkt7eti_W8pMvwjMBPQ&oe=6974D309',
+                title: 'Proyecto Arquitectónico',
+                location: 'Puebla'
+            },
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t51.71878-15/611336791_1819266672055508_2347371712209384374_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=100&ig_cache_key=MzgwNzE0ODM5OTQxMDY1MTE4MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=kmlDSenAYNYQ7kNvwFoE1yI&_nc_oc=AdnnRhkT0rzHvLLyNkvAF9cdKIepSgkzAGMj8cSk6PCGuvb1PVRzn4EtvKIvwM5xtD0Q-ocBFeMOyfCI4O3w8eqF&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_Afo3V0GzdWCHo_h2p-X_A-IoBH9h4dLVEHdDEQVSS_kQJQ&oe=6974CBD8',
+                title: 'Desarrollo Residencial',
+                location: 'Puebla'
+            },
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t51.82787-15/612610287_17914497234260567_2940726227252873914_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=107&ig_cache_key=MzgwNjYwNjg3MjcxMTg3MzkzMzE3OTE0NDk3MjI4MjYwNTY3.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjcyMHg4MDguc2RyLkMzIn0%3D&_nc_ohc=DmDTqbyPaBoQ7kNvwGCD48g&_nc_oc=AdkC3pgqJP8w3BkSjM68_JFU0qZrEvlrRqTCMV5AzFeE5xK2kF1bs510OqvDFjUCtJSS3UE-bu48FJCCjb2uxcrP&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_Afpl35n5TPBWaJnkLeYBoTJY8n9GTuRosdBvxtU28U6EPQ&oe=6974FAA8',
+                title: 'Remodelación Casa Colorado',
+                location: 'Puebla'
+            },
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t51.71878-15/612035614_26104249512512367_6894463538692929531_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=103&ig_cache_key=MzgwNTEyNDk0OTg2Mjg1NzgzMg%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHg2NDAuc2RyLkMzIn0%3D&_nc_ohc=KmUmDWaUNJAQ7kNvwFcWMCP&_nc_oc=Adm2E-keOkC9dutHo92_6DQKVEaFZFl5GwJslTNF9HcTrttB8tD4XNZcB_hXWw4KQbQT_0VdIABsrCBgqyn_sZhw&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_AfpvVPARlm1TBZctiI0arfyC2SOsHIivCm_1BKKhnW5wmA&oe=6974C982',
+                title: 'Casa Kilimanjaro 7',
+                location: 'Residencial Cumbres, Puebla'
+            },
+            {
+                url: 'https://instagram.fntr10-2.fna.fbcdn.net/v/t51.71878-15/571152143_2061985324209877_7494356122460010568_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=105&ig_cache_key=Mzc1MDY3OTEyODY4MjExMjk1NA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjY0MHgxMTM2LnNkci5DMyJ9&_nc_ohc=-p7pMj0bf7UQ7kNvwGl8raB&_nc_oc=AdmjGa8spRG0JttVJiUhAvg55d1j8ZVlg15nxtjF4e36DhsAOin0xaVwjjoCXv0m12Be6NikYPxm0s8lR7iCHakN&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-2.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_Afr9hj5SHxm1gWqRmL-EsvXRuKDpu8_XylmZge6YzqdCHA&oe=6974F7D8',
+                title: 'Casa Amatlán 14',
+                location: 'Lomas de Angelópolis'
+            },
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t51.82787-15/559377278_17903538810260567_5576443872072635693_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ig_cache_key=MzczNTU4MDk2NTA2NzM4MTM5NQ%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjE0NDB4MTkyMC5zZHIuQzMifQ%3D%3D&_nc_ohc=uGnL4YUJAbQQ7kNvwFixtIu&_nc_oc=Adky2J_-uy3UhpyALKP-xhDZnAS5jHH3VNj05n-ucP-4oSUEHG2dJ0SGKSY8uJzK3q-imZ-4qUJWzczDu8w00IoD&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=IEjUCzz7zUOVud3JqPSheA&oh=00_AfqohpBPnRqGuu2jooQHqz0rHB1PCGhWSbnpq7y7Gwl5Pw&oe=6974D932',
+                title: 'Proyecto Residencial',
+                location: 'Puebla'
+            },
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t51.71878-15/476367045_17874517986260567_2739847438597744366_n.jpg?stp=dst-jpg_e15_tt6&_nc_cat=108&ig_cache_key=MzU2MDY5OTI2Mjc4MzgzODg5NTE3ODc0NTE3OTgwMjYwNTY3.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjcyMHgxMjgwLnNkci5DMyJ9&_nc_ohc=rC6uhgC9bAIQ7kNvwG4hlky&_nc_oc=Adk0rPFGtVgL2C29y7zf6l3tevj6qM28i_HvzOA8CrAl7H8LBGQp1SmoouzArqUgqWldRRk5YKs-F8hqL87rdtWr&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=cx64qQltu7P735v1cg2NWQ&oh=00_AfocgdgFQHqiQR9LHwWHCJ0fltbV2oIuDnXJiLAIQxCnyQ&oe=6974D397',
+                title: 'Casa Cuencamé 28',
+                location: 'Lomas de Angelópolis'
+            },
+            {
+                url: 'https://instagram.fntr10-2.fna.fbcdn.net/v/t39.30808-6/453416094_17847691629260567_6594075534453494401_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=110&ig_cache_key=MzQyMzkzMzQ1NDIxNzkzMjA4Nw%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjEwOTV4NTg2LnNkci5DMyJ9&_nc_ohc=zfY7QED9XCIQ7kNvwGfMg94&_nc_oc=Adkj2IZVu28UvUi42sdcSzYuDiMKxCYvbzvXDX1H7dqagHtW71qq6eEoXVDGck0IXMTwPywbBpzhJHCswyNRenN3&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-2.fna&_nc_gid=f3TERy96adFySexdQ_WdWA&oh=00_Afpgu6Zu6EYaPpI5OZbq5Tamysi457-f_GQ8kRMAdO1-CA&oe=6974CD50',
+                title: 'Miniplaza Momoxpan',
+                location: 'San Pedro Cholula, Puebla'
+            },
+            {
+                url: 'https://instagram.fntr10-1.fna.fbcdn.net/v/t39.30808-6/450840543_17844014766260567_3166139243058922392_n.jpg?stp=dst-jpg_e35_tt6&_nc_cat=108&ig_cache_key=MzQxMDE5NTUwOTYyMzA3MDM3MA%3D%3D.3-ccb7-5&ccb=7-5&_nc_sid=58cdad&efg=eyJ2ZW5jb2RlX3RhZyI6InhwaWRzLjExMTZ4NzIyLnNkci5DMyJ9&_nc_ohc=rNeiyKjmddcQ7kNvwGYGTQn&_nc_oc=AdlejeTkbF1GADJ7Pduyk6MOTzDywqH2q3-YMYQgfOn3Imylav6QPO09NievAWnv7zSB3VF5NYxtddLZPS1yClhH&_nc_ad=z-m&_nc_cid=0&_nc_zt=23&_nc_ht=instagram.fntr10-1.fna&_nc_gid=f3TERy96adFySexdQ_WdWA&oh=00_AfqAt2xY9EhZ0nVfjpDQC53cb0FAtDrNxj-KS22_47JjGg&oe=6974D868',
+                title: 'Casa Habitacional',
+                location: 'Lomas de Angelópolis'
+            }
+        ];
+
+        function loadRandomInstagramImages() {
+            const gallery = document.getElementById('instagramGallery');
+            
+            // Mezclar todas las imágenes
+            const shuffled = [...instagramImages].sort(() => 0.5 - Math.random());
+            let imageIndex = 0;
+            let loadedCount = 0;
+            const maxImages = 3;
+            
+            // Limpiar galería
+            gallery.innerHTML = '';
+            
+            // Función para cargar una imagen con fallback
+            function loadImage(image, container) {
+                const img = new Image();
+                const projectDiv = document.createElement('div');
+                projectDiv.className = 'relative overflow-hidden rounded-xl shadow-lg group cursor-pointer';
+                projectDiv.onclick = () => window.open('https://instagram.com/escobar.arquitectura', '_blank');
+                
+                img.onload = function() {
+                    projectDiv.innerHTML = `
+                        <img src="${image.url}" alt="${image.title}" class="w-full h-80 object-cover transition-transform duration-300 group-hover:scale-110" loading="lazy">
+                        <div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end p-6">
+                            <div class="text-white">
+                                <h3 class="font-bold text-lg">${image.title}</h3>
+                                <p class="text-sm">${image.location}</p>
+                            </div>
+                        </div>
+                    `;
+                    container.appendChild(projectDiv);
+                    loadedCount++;
+                };
+                
+                img.onerror = function() {
+                    // Si falla, intentar con la siguiente imagen disponible
+                    imageIndex++;
+                    if (imageIndex < shuffled.length && loadedCount < maxImages) {
+                        loadImage(shuffled[imageIndex], container);
+                    }
+                };
+                
+                img.src = image.url;
+            }
+            
+            // Intentar cargar 3 imágenes
+            for (let i = 0; i < maxImages && imageIndex < shuffled.length; i++) {
+                loadImage(shuffled[imageIndex], gallery);
+                imageIndex++;
+            }
+        }
+
+        // Cargar imágenes cuando el DOM esté listo
+        document.addEventListener('DOMContentLoaded', loadRandomInstagramImages);
+    </script>
+
+</body>
+</html>

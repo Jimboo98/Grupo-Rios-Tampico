@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Consultoría Logística - Optimización de costos, procesos y cadena de suministro.">
+    <title>Consultoría Logística | Grupo Ríos Tampico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2b3f4e',
+                        'primary-dark': '#1f2f3d',
+                        accent: '#c47a3d',
+                        sand: '#f7f3ec',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo/optimized/webp/CSRios Logo sin fondo-opt.webp" alt="Grupo Ríos Tampico" class="h-12 w-auto">
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold text-primary uppercase tracking-wide">Grupo Ríos Tampico</span>
+                        <span class="text-sm text-gray-500">Soluciones integrales</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-600 font-semibold hover:text-primary transition">Inicio</a>
+                    <a href="el-grupo.html" class="text-gray-600 font-semibold hover:text-primary transition">El Grupo</a>
+                    <div class="relative group">
+                        <button class="text-primary font-semibold hover:text-accent transition flex items-center">
+                            Divisiones
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="divisiones.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Ver todas las divisiones</a>
+                            <hr class="border-gray-200">
+                            <a href="suministros-industriales.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Suministros de Construcción</a>
+                            <a href="consultoria-logistica.html" class="block px-4 py-3 text-sm font-semibold text-primary hover:bg-sand transition">Consultoría Logística</a>
+                            <a href="desarrollo-inmobiliario.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Desarrollo Inmobiliario</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contacto.html" class="bg-primary text-white px-5 py-2 rounded-lg font-bold hover:bg-primary-dark transition">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-4">División</p>
+                <h1 class="text-4xl md:text-5xl font-bold mb-6">Ríos Logistics Advisory</h1>
+                <p class="text-xl md:text-2xl text-gray-200">
+                    Optimización de costos, procesos y cadena de suministro.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Qué Hacemos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Qué hacemos</h2>
+                <p class="text-gray-700 text-lg leading-relaxed text-center max-w-3xl mx-auto mb-12">
+                    Diagnóstico, rediseño y ejecución logística para bajar costos operativos y elevar nivel de servicio. 
+                    Trabajamos con metodologías probadas y análisis cuantitativo para generar ahorros medibles.
+                </p>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-6 9l2 2 4-4"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Diagnóstico</h3>
+                        <p class="text-gray-600">Análisis profundo de operaciones y detección de ineficiencias</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Rediseño</h3>
+                        <p class="text-gray-600">Optimización de rutas, almacenes y procesos logísticos</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                            </svg>
+                        </div>
+                        <h3 class="font-bold text-primary text-lg mb-2">Ejecución</h3>
+                        <p class="text-gray-600">Implementación de mejoras con seguimiento y métricas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Misión de la División -->
+    <section class="py-16 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto">
+                <div class="bg-gradient-to-br from-accent/10 to-accent/5 border-l-4 border-accent rounded-xl p-10">
+                    <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Misión de la División</p>
+                    <p class="text-gray-800 text-xl md:text-2xl leading-relaxed font-semibold">
+                        "Optimizar costos, procesos y relaciones logísticas mediante análisis experto, diseño de 
+                        soluciones y estrategias operativas de alto impacto."
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cómo Trabajamos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-12 text-center">Cómo trabajamos</h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">1</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Evaluación inicial</h3>
+                                <p class="text-gray-600">
+                                    Mapeo de procesos actuales, identificación de cuellos de botella y oportunidades de mejora.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">2</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Análisis cuantitativo</h3>
+                                <p class="text-gray-600">
+                                    Medición de costos, tiempos de ciclo y nivel de servicio con datos reales.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">3</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Propuesta de valor</h3>
+                                <p class="text-gray-600">
+                                    Diseño de soluciones con proyección de ahorros y tiempos de implementación.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-white border border-gray-200 rounded-xl p-8 shadow-lg">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                <span class="text-primary font-bold text-xl">4</span>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-primary text-lg mb-2">Ejecución y seguimiento</h3>
+                                <p class="text-gray-600">
+                                    Implementación coordinada con seguimiento de indicadores y ajustes continuos.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Enfoque -->
+    <section class="py-16 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="max-w-5xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-8 text-center">Nuestro enfoque</h2>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="bg-white rounded-xl border border-gray-200 p-8">
+                        <h3 class="font-bold text-primary text-lg mb-3">Reducción de costos</h3>
+                        <p class="text-gray-600">
+                            Identificamos oportunidades de ahorro en transporte, inventarios y procesos operativos.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-200 p-8">
+                        <h3 class="font-bold text-primary text-lg mb-3">Mejora de servicio</h3>
+                        <p class="text-gray-600">
+                            Elevamos tiempos de entrega, disponibilidad y satisfacción del cliente final.
+                        </p>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-200 p-8">
+                        <h3 class="font-bold text-primary text-lg mb-3">Resultados medibles</h3>
+                        <p class="text-gray-600">
+                            Todas las propuestas incluyen KPIs claros y proyecciones de impacto financiero.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Relación con el Grupo -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-2xl md:text-3xl font-bold text-primary mb-6">Parte de Grupo Ríos Tampico</h2>
+                <p class="text-gray-700 text-lg leading-relaxed mb-8">
+                    Esta división forma parte de Grupo Ríos Tampico, operando con metodologías propias pero con 
+                    coordinación estratégica desde el grupo. Esto nos permite combinar consultoría logística con 
+                    Suministros de Construcción e industriales y desarrollo inmobiliario cuando se requieren soluciones integrales.
+                </p>
+                <a href="index.html" class="inline-flex items-center text-accent font-bold hover:text-primary transition">
+                    Conocer el grupo completo
+                    <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Necesitas optimizar tu operación logística?</h2>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Agenda una evaluación inicial sin costo y recibe un diagnóstico profesional.
+            </p>
+            <a href="contacto.html?division=logistica" class="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
+                Contactar esta división
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Grupo Ríos Tampico</h3>
+                    <p class="text-sm italic mb-4">"Construyendo eficiencia, suministrando calidad."</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Divisiones</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="suministros-industriales.html" class="hover:text-accent transition">Suministros de Construcción</a></li>
+                        <li><a href="consultoria-logistica.html" class="text-accent hover:text-white transition">Consultoría Logística</a></li>
+                        <li><a href="desarrollo-inmobiliario.html" class="hover:text-accent transition">Desarrollo Inmobiliario</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Contacto</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="mailto:miguelrios@gruporiostampico.com" class="hover:text-accent transition">miguelrios@gruporiostampico.com</a></li>
+                        <li><a href="tel:+525536463621" class="hover:text-accent transition">+52 55 3646 3621</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <p class="text-sm mb-3">Operado por Arrendamientos y Construcciones de Tampico.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-accent transition">Aviso de privacidad</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                <p>© 2026 Grupo Ríos Tampico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

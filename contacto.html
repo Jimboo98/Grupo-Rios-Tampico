@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contacto - Grupo Ríos Tampico">
+    <title>Contacto | Grupo Ríos Tampico</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2b3f4e',
+                        'primary-dark': '#1f2f3d',
+                        accent: '#c47a3d',
+                        sand: '#f7f3ec',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans bg-white text-gray-800 antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo/optimized/webp/CSRios Logo sin fondo-opt.webp" alt="Grupo Ríos Tampico" class="h-12 w-auto">
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold text-primary uppercase tracking-wide">Grupo Ríos Tampico</span>
+                        <span class="text-sm text-gray-500">Soluciones integrales</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-gray-600 font-semibold hover:text-primary transition">Inicio</a>
+                    <a href="el-grupo.html" class="text-gray-600 font-semibold hover:text-primary transition">El Grupo</a>
+                    <div class="relative group">
+                        <button class="text-gray-600 font-semibold hover:text-primary transition flex items-center">
+                            Divisiones
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="divisiones.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Ver todas las divisiones</a>
+                            <hr class="border-gray-200">
+                            <a href="suministros-industriales.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Suministros de Construcción</a>
+                            <a href="consultoria-logistica.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Consultoría Logística</a>
+                            <a href="desarrollo-inmobiliario.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Desarrollo Inmobiliario</a>
+                        </div>
+                    </div>
+
+                    <a href="contacto.html" class="bg-primary text-white px-5 py-2 rounded-lg font-bold hover:bg-primary-dark transition">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-br from-primary to-primary-dark text-white py-20">
+        <div class="container mx-auto px-6 text-center">
+            <p class="text-accent font-bold text-sm uppercase tracking-wider mb-4">Hablemos</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-6">Contacto</h1>
+            <p class="text-xl text-gray-200 max-w-3xl mx-auto">
+                Conéctate con el equipo adecuado para tu proyecto o consulta.
+            </p>
+        </div>
+    </section>
+
+    <!-- Formulario y Contactos -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="grid lg:grid-cols-5 gap-12">
+                    <!-- Formulario -->
+                    <div class="lg:col-span-3">
+                        <h2 class="text-3xl font-bold text-primary mb-8">Envíanos un mensaje</h2>
+                        <form id="contactForm" class="space-y-6">
+                            <div>
+                                <label for="nombre" class="block text-gray-700 font-semibold mb-2">Nombre completo *</label>
+                                <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                            </div>
+                            <div>
+                                <label for="empresa" class="block text-gray-700 font-semibold mb-2">Empresa</label>
+                                <input type="text" id="empresa" name="empresa" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                            </div>
+                            <div>
+                                <label for="correo" class="block text-gray-700 font-semibold mb-2">Correo electrónico *</label>
+                                <input type="email" id="correo" name="correo" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                            </div>
+                            <div>
+                                <label for="telefono" class="block text-gray-700 font-semibold mb-2">Teléfono</label>
+                                <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                            </div>
+                            <div>
+                                <label for="division" class="block text-gray-700 font-semibold mb-2">División de interés *</label>
+                                <select id="division" name="division" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                                    <option value="">Selecciona una división</option>
+                                    <option value="suministros">Suministros de Construcción</option>
+                                    <option value="logistica">Consultoría Logística (Ríos Logistics Advisory)</option>
+                                    <option value="inmobiliario">Desarrollo Inmobiliario</option>
+                                    <option value="general">Consulta general</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label for="mensaje" class="block text-gray-700 font-semibold mb-2">Mensaje *</label>
+                                <textarea id="mensaje" name="mensaje" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition resize-none"></textarea>
+                            </div>
+                            <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition shadow-lg">
+                                Enviar mensaje
+                            </button>
+                            <p class="text-sm text-gray-500 text-center">* Campos obligatorios</p>
+                        </form>
+                    </div>
+
+                    <!-- Información de contacto -->
+                    <div class="lg:col-span-2">
+                        <h2 class="text-2xl font-bold text-primary mb-8">Contacto directo</h2>
+                        <div class="space-y-6">
+                            <div class="bg-sand border border-gray-200 rounded-xl p-6">
+                                <h3 class="font-bold text-primary mb-1">Suministros de Construcción</h3>
+                                <p class="text-sm text-gray-600 mb-4">Materiales, herramientas y equipos</p>
+                                <div class="space-y-2 text-sm">
+                                    <a href="mailto:franciscorios@gruporiostampico.com" class="flex items-center text-accent hover:text-primary transition">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                        franciscorios@gruporiostampico.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-sand border border-gray-200 rounded-xl p-6">
+                                <h3 class="font-bold text-primary mb-1">Consultoría Logística</h3>
+                                <p class="text-sm text-gray-600 mb-4">Optimización de costos y procesos</p>
+                                <div class="space-y-2 text-sm">
+                                    <a href="mailto:miguelrios@gruporiostampico.com" class="flex items-center text-accent hover:text-primary transition">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                        miguelrios@gruporiostampico.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            <div class="bg-sand border border-gray-200 rounded-xl p-6">
+                                <h3 class="font-bold text-primary mb-1">Desarrollo Inmobiliario</h3>
+                                <p class="text-sm text-gray-600 mb-4">Proyectos habitacionales y comerciales</p>
+                                <div class="space-y-2 text-sm">
+                                    <a href="mailto:nallelybello@gruporiostampico.com" class="flex items-center text-accent hover:text-primary transition">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                                        </svg>
+                                        nallelybello@gruporiostampico.com
+                                    </a>
+                                </div>
+                            </div>
+
+                            
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Grupo Ríos Tampico</h3>
+                    <p class="text-sm italic mb-4">"Construyendo eficiencia, suministrando calidad."</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Divisiones</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="suministros-industriales.html" class="hover:text-accent transition">Suministros de Construcción</a></li>
+                        <li><a href="consultoria-logistica.html" class="hover:text-accent transition">Consultoría Logística</a></li>
+                        <li><a href="desarrollo-inmobiliario.html" class="hover:text-accent transition">Desarrollo Inmobiliario</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <p class="text-sm mb-3">Operado por Arrendamientos y Construcciones de Tampico.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-accent transition">Aviso de privacidad</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                <p>© 2026 Grupo Ríos Tampico. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Pre-populate division selector from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const divisionParam = urlParams.get('division');
+        if (divisionParam) {
+            const divisionSelect = document.getElementById('division');
+            divisionSelect.value = divisionParam;
+        }
+
+        // Handle form submission
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const formData = {
+                nombre: document.getElementById('nombre').value,
+                empresa: document.getElementById('empresa').value,
+                correo: document.getElementById('correo').value,
+                telefono: document.getElementById('telefono').value,
+                division: document.getElementById('division').value,
+                mensaje: document.getElementById('mensaje').value
+            };
+
+            // Map division to email
+            const emailMap = {
+                'suministros': 'franciscorios@gruporiostampico.com',
+                'logistica': 'miguelrios@gruporiostampico.com',
+                'inmobiliario': 'nallelybello@gruporiostampico.com',
+                'general': 'franciscorios@gruporiostampico.com'
+            };
+
+            const targetEmail = emailMap[formData.division] || 'franciscorios@gruporiostampico.com';
+            
+            // Build mailto URL
+            const subject = `Contacto desde web - ${formData.nombre}`;
+            const body = `
+Nombre: ${formData.nombre}
+Empresa: ${formData.empresa || 'No especificada'}
+Correo: ${formData.correo}
+Teléfono: ${formData.telefono || 'No especificado'}
+División: ${formData.division}
+
+Mensaje:
+${formData.mensaje}
+            `.trim();
+
+            const mailtoUrl = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            
+            window.location.href = mailtoUrl;
+        });
+    </script>
+
+</body>
+</html>

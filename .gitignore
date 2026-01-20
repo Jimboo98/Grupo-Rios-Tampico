@@ -28,6 +28,13 @@ lerna-debug.log*
 # OS artifacts
 .DS_Store
 Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Temporary/backup files
+*.tmp
+*.bak
+*.orig
 
 # Swap files
 *.swp

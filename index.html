@@ -3,51 +3,319 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Grupo Ríos | Sitio en construcción - Suministros, construcción inmobiliaria y consultoría">
-    <title>Grupo Ríos | Sitio en construcción</title>
+    <meta name="description" content="Grupo Ríos Tampico - Soluciones integrales en suministro industrial, consultoría logística y desarrollo inmobiliario.">
+    <title>Grupo Ríos Tampico | Soluciones integrales</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#2b3f4e',
+                        'primary-dark': '#1f2f3d',
+                        accent: '#c47a3d',
+                        sand: '#f7f3ec',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
 </head>
-<body>
-    <div class="background-shape"></div>
-    <header class="topbar container">
-        <div class="brand">Grupo Ríos</div>
-        <div class="tagline">Suministros · Construcción inmobiliaria · Consultoría</div>
+<body class="font-sans bg-gradient-to-b from-gray-50 to-white text-gray-800 antialiased">
+    
+    <!-- Header -->
+    <header class="sticky top-0 bg-white/95 backdrop-blur-sm border-b border-gray-200 z-50">
+        <nav class="container mx-auto px-6 py-4">
+            <div class="flex items-center justify-between">
+                <a href="index.html" class="flex items-center gap-3">
+                    <img src="logo/optimized/webp/CSRios Logo sin fondo-opt.webp" alt="Grupo Ríos Tampico" class="h-12 w-auto">
+                    <div class="flex flex-col">
+                        <span class="text-lg font-bold text-primary uppercase tracking-wide">Grupo Ríos Tampico</span>
+                        <span class="text-sm text-gray-500">Soluciones integrales</span>
+                    </div>
+                </a>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="index.html" class="text-primary font-semibold hover:text-accent transition">Inicio</a>
+                    <a href="el-grupo.html" class="text-gray-600 font-semibold hover:text-primary transition">El Grupo</a>
+                    <div class="relative group">
+                        <button class="text-gray-600 font-semibold hover:text-primary transition flex items-center">
+                            Divisiones
+                            <svg class="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                            </svg>
+                        </button>
+                        <div class="absolute left-0 mt-2 w-64 bg-white rounded-lg shadow-xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <a href="divisiones.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Ver todas las divisiones</a>
+                            <hr class="border-gray-200">
+                            <a href="suministros-industriales.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Suministros de Construcción</a>
+                            <a href="consultoria-logistica.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Consultoría Logística</a>
+                            <a href="desarrollo-inmobiliario.html" class="block px-4 py-3 text-sm text-gray-700 hover:bg-sand transition">Desarrollo Inmobiliario</a>
+                        </div>
+                    </div>
+                    
+                    <a href="contacto.html" class="bg-primary text-white px-5 py-2 rounded-lg font-bold hover:bg-primary-dark transition">Contáctanos</a>
+                </div>
+            </div>
+        </nav>
     </header>
 
-    <main class="hero container">
-        <div class="hero-copy">
-            <p class="badge">Sitio en construcción</p>
-            <h1>Estamos preparando una plataforma sólida para México</h1>
-            <p class="lead">Pronto podrás cotizar suministros de construcción, proyectos inmobiliarios y consultoría especializada desde un mismo lugar.</p>
-            <div class="actions">
-                <a class="btn primary" href="mailto:contacto@gruporios-tampico.com">Escríbenos</a>
-                <a class="btn ghost" href="tel:+528331234567">Llámanos</a>
-            </div>
-            <p class="status">Operamos en todo México.</p>
+    <!-- Hero -->
+    <section class="relative bg-gradient-to-br from-primary to-primary-dark text-white overflow-hidden">
+        <div class="absolute inset-0 opacity-10">
+            <div class="absolute inset-0 bg-gradient-to-r from-accent to-transparent"></div>
         </div>
-    </main>
-
-    <section class="contact container" id="contacto">
-        <div class="contact-card">
-            <div>
-                <p class="eyebrow">Contacto directo</p>
-                <h3>Hablemos de tu proyecto</h3>
-                <p class="ref-note">Cuéntanos qué necesitas en suministros, construcción o consultoría.</p>
+        <div class="container mx-auto px-6 py-24 md:py-32 relative z-10">
+            <div class="max-w-4xl mx-auto text-center">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight">
+                    Soluciones integrales para operar, crecer y desarrollar
+                </h1>
+                <p class="text-xl md:text-2xl mb-10 text-gray-200 max-w-2xl mx-auto">
+                    Grupo empresarial enfocado en suministro industrial, consultoría logística y desarrollo inmobiliario.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="el-grupo.html" class="bg-white text-primary px-8 py-4 rounded-lg font-bold hover:bg-gray-100 transition shadow-lg">
+                        Conocer el Grupo
+                    </a>
+                    <a href="divisiones.html" class="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-bold hover:bg-white hover:text-primary transition">
+                        Ver Divisiones
+                    </a>
+                </div>
             </div>
-            <div class="contact-actions">
-                <a class="chip" href="mailto:MIGUELRIOS@gruporiostampico.com">MIGUELRIOS@gruporiostampico.com</a>
-                <a class="chip" href="tel:+525535028194">55 3502 8194</a>
+        </div>
+        <div class="absolute bottom-0 left-0 right-0 h-16 bg-gradient-to-t from-white to-transparent"></div>
+    </section>
+
+    <!-- Quiénes Somos Resumen -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12 items-center max-w-6xl mx-auto">
+                <div>
+                    <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Quiénes Somos</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Un grupo empresarial con visión estratégica</h2>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-6">
+                        Grupo Ríos Tampico es un grupo empresarial que integra soluciones industriales, logísticas e inmobiliarias, 
+                        orientadas a la eficiencia operativa y el crecimiento sostenible de nuestros clientes.
+                    </p>
+                    <p class="text-gray-600 text-lg leading-relaxed mb-8">
+                        Operamos a través de tres divisiones especializadas que trabajan de forma independiente pero coordinada, 
+                        ofreciendo un frente ejecutivo único.
+                    </p>
+                    <a href="el-grupo.html" class="inline-block bg-primary text-white px-6 py-3 rounded-lg font-bold hover:bg-primary-dark transition">
+                        Conocer más
+                    </a>
+                </div>
+                <div class="relative">
+                    <div class="bg-gradient-to-br from-sand to-white rounded-2xl p-8 border border-gray-200 shadow-xl">
+                        <div class="space-y-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-primary">Experiencia multisectorial</p>
+                                    <p class="text-sm text-gray-600">En industria, logística e inmobiliario</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-primary">Enfoque en eficiencia</p>
+                                    <p class="text-sm text-gray-600">Optimización en cada proceso</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <div class="w-12 h-12 bg-accent/20 rounded-lg flex items-center justify-center">
+                                    <svg class="w-6 h-6 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+                                    </svg>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-primary">Aliados estratégicos</p>
+                                    <p class="text-sm text-gray-600">Relaciones de largo plazo</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <footer class="footer container">
-        <p>© 2025 Grupo Ríos.</p>
+    <!-- Divisiones -->
+    <section class="py-20 bg-sand">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Nuestras Divisiones</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Tres áreas especializadas, una sola visión</h2>
+                <p class="text-gray-600 text-lg">
+                    Cada división opera con especialistas y procesos propios, coordinados desde un solo frente ejecutivo.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Suministros de Construcción e industriales</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Insumos, equipos y soluciones para la operación industrial con marcas líderes y soporte técnico.
+                    </p>
+                    <a href="suministros-industriales.html" class="inline-flex items-center text-accent font-bold hover:text-primary transition">
+                        Ver división
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Consultoría Logística</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Optimización de costos, procesos y cadena de suministro con metodologías probadas.
+                    </p>
+                    <a href="consultoria-logistica.html" class="inline-flex items-center text-accent font-bold hover:text-primary transition">
+                        Ver división
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-lg border border-gray-200 p-8 hover:shadow-2xl transition-all duration-300 hover:-translate-y-2">
+                    <div class="w-16 h-16 bg-accent/20 rounded-xl flex items-center justify-center mb-6">
+                        <svg class="w-8 h-8 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-2xl font-bold text-primary mb-4">Desarrollo Inmobiliario</h3>
+                    <p class="text-gray-600 mb-6 leading-relaxed">
+                        Proyectos habitacionales y comerciales de alto impacto con diseño funcional y calidad ejecutiva.
+                    </p>
+                    <a href="desarrollo-inmobiliario.html" class="inline-flex items-center text-accent font-bold hover:text-primary transition">
+                        Ver división
+                        <svg class="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Propuesta de Valor -->
+    <section class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <p class="text-accent font-bold text-sm uppercase tracking-wider mb-3">Por qué elegirnos</p>
+                <h2 class="text-3xl md:text-4xl font-bold text-primary mb-6">Propuesta de valor del grupo</h2>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto">
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 5a1 1 0 011-1h14a1 1 0 011 1v2a1 1 0 01-1 1H5a1 1 0 01-1-1V5zM4 13a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H5a1 1 0 01-1-1v-6zM16 13a1 1 0 011-1h2a1 1 0 011 1v6a1 1 0 01-1 1h-2a1 1 0 01-1-1v-6z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Integración de servicios</h3>
+                    <p class="text-gray-600">Soluciones coordinadas desde un solo frente ejecutivo.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Experiencia multisectorial</h3>
+                    <p class="text-gray-600">Conocimiento profundo en industria, logística e inmobiliario.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Enfoque en eficiencia</h3>
+                    <p class="text-gray-600">Optimización constante de procesos y costos operativos.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 bg-accent/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <svg class="w-10 h-10 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7"></path>
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-bold text-primary mb-3">Visión estratégica</h3>
+                    <p class="text-gray-600">Relaciones de largo plazo con resultados sostenibles.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="py-20 bg-gradient-to-br from-primary to-primary-dark text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-3xl md:text-5xl font-bold mb-6">¿Buscas un aliado estratégico para tu operación o proyecto?</h2>
+            <p class="text-xl text-gray-200 mb-10 max-w-2xl mx-auto">
+                Conéctate con el equipo correcto y recibe asesoría especializada.
+            </p>
+            <a href="contacto.html" class="inline-block bg-white text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-gray-100 transition shadow-2xl">
+                Contáctanos
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Grupo Ríos Tampico</h3>
+                    <p class="text-sm italic mb-4">"Construyendo eficiencia, suministrando calidad."</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Divisiones</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="suministros-industriales.html" class="hover:text-accent transition">Suministros de Construcción</a></li>
+                        <li><a href="consultoria-logistica.html" class="hover:text-accent transition">Consultoría Logística</a></li>
+                        <li><a href="desarrollo-inmobiliario.html" class="hover:text-accent transition">Desarrollo Inmobiliario</a></li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h4 class="text-white font-bold mb-4">Legal</h4>
+                    <p class="text-sm mb-3">Operado por Arrendamientos y Construcciones de Tampico.</p>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#" class="hover:text-accent transition">Aviso de privacidad</a></li>
+                        <li><a href="#" class="hover:text-accent transition">Términos y condiciones</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 pt-6 text-center text-sm">
+                <p>© 2026 Grupo Ríos Tampico. Todos los derechos reservados.</p>
+            </div>
+        </div>
     </footer>
 
-    <script src="script.js"></script>
 </body>
 </html>
