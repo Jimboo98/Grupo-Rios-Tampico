@@ -84,7 +84,7 @@
                     <!-- Formulario -->
                     <div class="lg:col-span-3">
                         <h2 class="text-3xl font-bold text-primary mb-8">Envíanos un mensaje</h2>
-                        <form id="contactForm" class="space-y-6">
+                        <form id="contactForm" class="space-y-6" method="POST" action="send-contact.php" novalidate>
                             <div>
                                 <label for="nombre" class="block text-gray-700 font-semibold mb-2">Nombre completo *</label>
                                 <input type="text" id="nombre" name="nombre" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
@@ -95,11 +95,15 @@
                             </div>
                             <div>
                                 <label for="correo" class="block text-gray-700 font-semibold mb-2">Correo electrónico *</label>
-                                <input type="email" id="correo" name="correo" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                                <input type="email" id="correo" name="correo" required placeholder="ejemplo@correo.com" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                                <p id="correoError" class="text-xs text-red-600 mt-1 hidden"></p>
+                                <p id="correoSuccess" class="text-xs text-green-600 mt-1 hidden"></p>
                             </div>
                             <div>
                                 <label for="telefono" class="block text-gray-700 font-semibold mb-2">Teléfono</label>
-                                <input type="tel" id="telefono" name="telefono" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                                <input type="tel" id="telefono" name="telefono" placeholder="Ej: 8331234567 o +52 833 123 4567" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition">
+                                <p id="telefonoError" class="text-xs text-red-600 mt-1 hidden"></p>
+                                <p id="telefonoSuccess" class="text-xs text-green-600 mt-1 hidden"></p>
                             </div>
                             <div>
                                 <label for="division" class="block text-gray-700 font-semibold mb-2">División de interés *</label>
@@ -115,10 +119,19 @@
                                 <label for="mensaje" class="block text-gray-700 font-semibold mb-2">Mensaje *</label>
                                 <textarea id="mensaje" name="mensaje" rows="6" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-accent transition resize-none"></textarea>
                             </div>
-                            <button type="submit" class="w-full bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition shadow-lg">
-                                Enviar mensaje
+                            <div class="hidden">
+                                <label for="website" class="sr-only">No llenar</label>
+                                <input type="text" id="website" name="website" tabindex="-1" autocomplete="off">
+                            </div>
+                            <button type="submit" id="submitBtn" class="w-full bg-primary text-white px-8 py-4 rounded-lg font-bold text-lg hover:bg-primary-dark transition shadow-lg flex items-center justify-center">
+                                <svg id="spinner" class="hidden animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+                                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                                </svg>
+                                <span id="btnText">Enviar mensaje</span>
                             </button>
                             <p class="text-sm text-gray-500 text-center">* Campos obligatorios</p>
+                            <div id="formStatus" class="text-center text-sm font-semibold"></div>
                         </form>
                     </div>
 
@@ -130,6 +143,12 @@
                                 <h3 class="font-bold text-primary mb-1">Suministros de Construcción</h3>
                                 <p class="text-sm text-gray-600 mb-4">Materiales, herramientas y equipos</p>
                                 <div class="space-y-2 text-sm">
+                                    <a href="https://wa.me/528331056316" target="_blank" class="flex items-center text-primary hover:text-accent transition">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z"></path>
+                                        </svg>
+                                        +52 833 105 6316
+                                    </a>
                                     <a href="mailto:franciscorios@gruporiostampico.com" class="flex items-center text-accent hover:text-primary transition">
                                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -143,6 +162,12 @@
                                 <h3 class="font-bold text-primary mb-1">Consultoría Logística</h3>
                                 <p class="text-sm text-gray-600 mb-4">Optimización de costos y procesos</p>
                                 <div class="space-y-2 text-sm">
+                                    <a href="https://wa.me/525536463621" target="_blank" class="flex items-center text-primary hover:text-accent transition">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z"></path>
+                                        </svg>
+                                        +52 55 3646 3621
+                                    </a>
                                     <a href="mailto:miguelrios@gruporiostampico.com" class="flex items-center text-accent hover:text-primary transition">
                                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -156,6 +181,12 @@
                                 <h3 class="font-bold text-primary mb-1">Desarrollo Inmobiliario</h3>
                                 <p class="text-sm text-gray-600 mb-4">Proyectos habitacionales y comerciales</p>
                                 <div class="space-y-2 text-sm">
+                                    <a href="https://wa.me/525519629902" target="_blank" class="flex items-center text-primary hover:text-accent transition">
+                                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.82 21 3 14.18 3 6V5z"></path>
+                                        </svg>
+                                        +52 55 1962 9902
+                                    </a>
                                     <a href="mailto:nallelybello@gruporiostampico.com" class="flex items-center text-accent hover:text-primary transition">
                                         <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
@@ -194,10 +225,6 @@
                 <div>
                     <h4 class="text-white font-bold mb-4">Legal</h4>
                     <p class="text-sm mb-3">Operado por Arrendamientos y Construcciones de Tampico.</p>
-                    <ul class="space-y-2 text-sm">
-                        <li><a href="#" class="hover:text-accent transition">Aviso de privacidad</a></li>
-                        <li><a href="#" class="hover:text-accent transition">Términos y condiciones</a></li>
-                    </ul>
                 </div>
             </div>
             <div class="border-t border-gray-700 pt-6 text-center text-sm">
@@ -215,45 +242,180 @@
             divisionSelect.value = divisionParam;
         }
 
-        // Handle form submission
-        document.getElementById('contactForm').addEventListener('submit', function(e) {
+        // ===== Validación de correo electrónico en tiempo real =====
+        const correoInput = document.getElementById('correo');
+        const correoError = document.getElementById('correoError');
+        const correoSuccess = document.getElementById('correoSuccess');
+
+        function validarCorreo(valor) {
+            // Si está vacío, es inválido (campo obligatorio)
+            if (valor.trim() === '') {
+                return { valido: false, mensaje: 'El correo es obligatorio' };
+            }
+            
+            // Validar formato de correo
+            const regexCorreo = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+            if (!regexCorreo.test(valor)) {
+                return { valido: false, mensaje: 'Formato de correo inválido' };
+            }
+            
+            return { valido: true, mensaje: '' };
+        }
+
+        function actualizarEstadoCorreo() {
+            const resultado = validarCorreo(correoInput.value);
+            
+            if (correoInput.value === '') {
+                // Campo vacío - solo borde gris
+                correoInput.classList.remove('border-red-500', 'border-green-500');
+                correoInput.classList.add('border-gray-300');
+                correoError.classList.add('hidden');
+                correoSuccess.classList.add('hidden');
+            } else if (resultado.valido) {
+                // Válido
+                correoInput.classList.remove('border-red-500', 'border-gray-300');
+                correoInput.classList.add('border-green-500');
+                correoError.classList.add('hidden');
+                correoSuccess.classList.remove('hidden');
+                correoSuccess.textContent = '✓';
+            } else {
+                // Inválido
+                correoInput.classList.remove('border-green-500', 'border-gray-300');
+                correoInput.classList.add('border-red-500');
+                correoError.classList.remove('hidden');
+                correoError.textContent = '✕ ' + resultado.mensaje;
+                correoSuccess.classList.add('hidden');
+            }
+        }
+
+        // Validar en tiempo real mientras el usuario escribe
+        correoInput.addEventListener('input', actualizarEstadoCorreo);
+        correoInput.addEventListener('blur', actualizarEstadoCorreo);
+
+        // ===== Validación de teléfono en tiempo real =====
+        const telefonoInput = document.getElementById('telefono');
+        const telefonoError = document.getElementById('telefonoError');
+        const telefonoSuccess = document.getElementById('telefonoSuccess');
+
+        function validarTelefono(valor) {
+            // Limpiar el valor de espacios, guiones y paréntesis
+            const valorLimpio = valor.replace(/[\s\-\(\)]/g, '');
+            
+            // Si está vacío, es válido (campo opcional)
+            if (valorLimpio === '') {
+                return { valido: true, mensaje: '' };
+            }
+            
+            // Verificar que solo contenga números y opcionalmente el símbolo +
+            if (!/^[\+]?[0-9]+$/.test(valorLimpio)) {
+                return { valido: false, mensaje: 'Solo se permiten números y el símbolo +' };
+            }
+            
+            // Extraer solo los dígitos
+            const soloDigitos = valorLimpio.replace(/\+/g, '');
+            
+            // Validar longitud (10 dígitos para México, o 12-13 con código de país)
+            if (soloDigitos.length === 10 || (soloDigitos.length >= 12 && soloDigitos.length <= 13)) {
+                return { valido: true, mensaje: '' };
+            } else if (soloDigitos.length > 13) {
+                return { valido: false, mensaje: 'El número tiene demasiados dígitos' };
+            } else {
+                return { valido: false, mensaje: 'Formato de teléfono inválido' };
+            }
+        }
+
+        function actualizarEstadoTelefono() {
+            const resultado = validarTelefono(telefonoInput.value);
+            
+            if (telefonoInput.value === '') {
+                // Campo vacío - remover todos los estilos
+                telefonoInput.classList.remove('border-red-500', 'border-green-500');
+                telefonoInput.classList.add('border-gray-300');
+                telefonoError.classList.add('hidden');
+                telefonoSuccess.classList.add('hidden');
+            } else if (resultado.valido) {
+                // Válido
+                telefonoInput.classList.remove('border-red-500', 'border-gray-300');
+                telefonoInput.classList.add('border-green-500');
+                telefonoError.classList.add('hidden');
+                telefonoSuccess.classList.remove('hidden');
+                telefonoSuccess.textContent = '✓';
+            } else {
+                // Inválido
+                telefonoInput.classList.remove('border-green-500', 'border-gray-300');
+                telefonoInput.classList.add('border-red-500');
+                telefonoError.classList.remove('hidden');
+                telefonoError.textContent = '✕ ' + resultado.mensaje;
+                telefonoSuccess.classList.add('hidden');
+            }
+        }
+
+        // Validar en tiempo real mientras el usuario escribe
+        telefonoInput.addEventListener('input', actualizarEstadoTelefono);
+        telefonoInput.addEventListener('blur', actualizarEstadoTelefono);
+
+        // Handle form submission via fetch to backend
+        const form = document.getElementById('contactForm');
+        const statusEl = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+        const spinner = document.getElementById('spinner');
+        const btnText = document.getElementById('btnText');
+
+        form.addEventListener('submit', async (e) => {
             e.preventDefault();
-            
-            const formData = {
-                nombre: document.getElementById('nombre').value,
-                empresa: document.getElementById('empresa').value,
-                correo: document.getElementById('correo').value,
-                telefono: document.getElementById('telefono').value,
-                division: document.getElementById('division').value,
-                mensaje: document.getElementById('mensaje').value
-            };
+            statusEl.textContent = '';
 
-            // Map division to email
-            const emailMap = {
-                'suministros': 'franciscorios@gruporiostampico.com',
-                'logistica': 'miguelrios@gruporiostampico.com',
-                'inmobiliario': 'nallelybello@gruporiostampico.com',
-                'general': 'franciscorios@gruporiostampico.com'
-            };
+            // Validar correo antes de enviar
+            if (!validarCorreo(correoInput.value).valido) {
+                statusEl.className = 'text-center text-sm font-semibold text-red-600 mt-2';
+                statusEl.textContent = 'Por favor corrige el correo electrónico antes de enviar.';
+                correoInput.focus();
+                return;
+            }
 
-            const targetEmail = emailMap[formData.division] || 'franciscorios@gruporiostampico.com';
-            
-            // Build mailto URL
-            const subject = `Contacto desde web - ${formData.nombre}`;
-            const body = `
-Nombre: ${formData.nombre}
-Empresa: ${formData.empresa || 'No especificada'}
-Correo: ${formData.correo}
-Teléfono: ${formData.telefono || 'No especificado'}
-División: ${formData.division}
+            // Validar teléfono antes de enviar
+            if (telefonoInput.value && !validarTelefono(telefonoInput.value).valido) {
+                statusEl.className = 'text-center text-sm font-semibold text-red-600 mt-2';
+                statusEl.textContent = 'Por favor corrige el número de teléfono antes de enviar.';
+                telefonoInput.focus();
+                return;
+            }
 
-Mensaje:
-${formData.mensaje}
-            `.trim();
+            // Deshabilitar botón y mostrar loader
+            submitBtn.disabled = true;
+            spinner.classList.remove('hidden');
+            btnText.textContent = 'Enviando...';
 
-            const mailtoUrl = `mailto:${targetEmail}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-            
-            window.location.href = mailtoUrl;
+            const formData = new FormData(form);
+
+            try {
+                const res = await fetch(form.action, {
+                    method: 'POST',
+                    body: formData
+                });
+
+                const data = await res.json();
+
+                if (data.success) {
+                    statusEl.className = 'text-center text-sm font-semibold text-green-600 mt-2';
+                    statusEl.textContent = 'Mensaje enviado. Te contactaremos pronto.';
+                    form.reset();
+                    // Limpiar estado de los campos validados
+                    actualizarEstadoCorreo();
+                    actualizarEstadoTelefono();
+                } else {
+                    statusEl.className = 'text-center text-sm font-semibold text-red-600 mt-2';
+                    statusEl.textContent = data.message || 'No se pudo enviar. Intenta de nuevo.';
+                }
+            } catch (error) {
+                statusEl.className = 'text-center text-sm font-semibold text-red-600 mt-2';
+                statusEl.textContent = 'Hubo un problema al enviar. Intenta de nuevo.';
+            } finally {
+                // Re-habilitar botón y ocultar loader
+                submitBtn.disabled = false;
+                spinner.classList.add('hidden');
+                btnText.textContent = 'Enviar mensaje';
+            }
         });
     </script>
 

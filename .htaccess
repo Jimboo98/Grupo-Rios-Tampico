@@ -1,6 +1,13 @@
 # Configuración de Apache para Grupo Ríos Tampico
 # Este archivo optimiza el rendimiento y la seguridad del sitio
 
+# ===== Variables de entorno para SMTP (no almacenar contraseñas en el código) =====
+# Cambia SMTP_PASS al valor real en el servidor (no lo dejes en el repo)
+SetEnv SMTP_HOST smtp.office365.com
+SetEnv SMTP_USER MIGUELRIOS@gruporiostampico.com
+SetEnv SMTP_PASS bhwqvgzbxzlvjnqb
+SetEnv SMTP_PORT 587
+
 # ===== URLs limpias sin extensión .html =====
 RewriteEngine On
 
