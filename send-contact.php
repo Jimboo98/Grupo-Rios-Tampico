@@ -48,35 +48,23 @@ $recipients = [
 
 $toEmail = $recipients[$division] ?? $recipients['general'];
 
-$mail = new PHPMailer(true);
-
+// Intentar primero con mail() de PHP (recomendado por GoDaddy)
 try {
-    // SMTP settings — valores vía variables de entorno (no quedan en el código)
-    $smtpHost = getenv('SMTP_HOST') ?: 'smtp.office365.com';
-    $smtpUser = getenv('SMTP_USER') ?: 'miguelrios@gruporiostampico.com';
-    $smtpPass = getenv('SMTP_PASS') ?: '';
-    $smtpPort = (int) (getenv('SMTP_PORT') ?: 587);
-
-    if ($smtpPass === '') {
-        respond(false, 'Falta la contraseña SMTP (SMTP_PASS)');
-    }
-
-    $mail->isSMTP();
-    $mail->Host       = $smtpHost;
-    $mail->SMTPAuth   = true;
-    $mail->Username   = $smtpUser;
-    $mail->Password   = $smtpPass;
-    $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Microsoft 365 usa STARTTLS en 587
-    $mail->Port       = $smtpPort;
-
-    $mail->setFrom($smtpUser, 'Web Grupo Ríos Tampico');
+    $mail = new PHPMailer(true);
+    
+    // Usar mail() nativo de PHP
+    $mail->isMail();
+    
+    // Usar cuenta real de Office 365 como remitente para pasar validaciones SPF/DKIM
+    // El Reply-To apunta al visitante para que puedas responder directamente
+    $mail->setFrom('miguelrios@gruporiostampico.com', 'Formulario Web - Grupo Ríos');
     $mail->addAddress($toEmail);
     $mail->addReplyTo($correo, $nombre);
-
+    
     $mail->CharSet = 'UTF-8';
     $mail->isHTML(true);
     $mail->Subject = 'Contacto desde web - ' . $nombre;
-
+    
     // Cuerpo HTML con diseño
     $htmlBody = '
     <!DOCTYPE html>
@@ -146,7 +134,7 @@ try {
         </div>
     </body>
     </html>';
-
+    
     // Versión texto plano como alternativa
     $textBody = "Nuevo mensaje de contacto - Grupo Ríos Tampico\n\n";
     $textBody .= "NOMBRE: " . $nombre . "\n";
@@ -156,13 +144,14 @@ try {
     $textBody .= "DIVISIÓN: " . $division . "\n\n";
     $textBody .= "MENSAJE:\n" . $mensaje . "\n\n";
     $textBody .= "---\nEste mensaje fue enviado desde gruporiostampico.com";
-
+    
     $mail->Body = $htmlBody;
     $mail->AltBody = $textBody;
-
+    
     $mail->send();
-    respond(true, 'Mensaje enviado');
+    respond(true, 'Mensaje enviado exitosamente');
+    
 } catch (Exception $e) {
-    // Log $mail->ErrorInfo on server logs if needed
-    respond(false, 'No se pudo enviar: ' . $mail->ErrorInfo);
+    respond(false, 'Error al enviar: ' . $mail->ErrorInfo);
 }
+

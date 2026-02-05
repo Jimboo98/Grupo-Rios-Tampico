@@ -398,7 +398,7 @@
 
                 if (data.success) {
                     statusEl.className = 'text-center text-sm font-semibold text-green-600 mt-2';
-                    statusEl.textContent = 'Mensaje enviado. Te contactaremos pronto.';
+                    statusEl.textContent = data.message || 'Mensaje enviado. Te contactaremos pronto.';
                     form.reset();
                     // Limpiar estado de los campos validados
                     actualizarEstadoCorreo();

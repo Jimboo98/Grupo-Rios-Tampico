@@ -1,32 +1,21 @@
 # Configuración de Apache para Grupo Ríos Tampico
 # Este archivo optimiza el rendimiento y la seguridad del sitio
 
-# ===== Variables de entorno para SMTP (no almacenar contraseñas en el código) =====
-# Cambia SMTP_PASS al valor real en el servidor (no lo dejes en el repo)
-SetEnv SMTP_HOST smtp.office365.com
-SetEnv SMTP_USER MIGUELRIOS@gruporiostampico.com
-SetEnv SMTP_PASS bhwqvgzbxzlvjnqb
-SetEnv SMTP_PORT 587
+# ===== Variables de entorno para SMTP =====
+# Usa cuenta de cPanel para envío del formulario
+SetEnv SMTP_HOST mail.gruporiostampico.com
+SetEnv SMTP_USER contacto@gruporiostampico.com
+SetEnv SMTP_PASS AnimalSMF98@
+SetEnv SMTP_PORT 465
+SetEnv SMTP_SECURE smtps
 
-# ===== URLs limpias sin extensión .html =====
-RewriteEngine On
+# ===== Configuración de índice =====
+DirectoryIndex index.html index.php
 
-# Redirigir URLs con .html a versiones sin extensión (301 permanente)
-RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.html
-RewriteRule ^(.*)\.html$ /$1 [R=301,L,NE]
+# ===== UTF-8 encoding =====
+AddDefaultCharset UTF-8
 
-# Agregar .html internamente si el archivo existe
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteCond %{REQUEST_FILENAME}.html -f
-RewriteRule ^(.*)$ $1.html [L]
-
-# ===== Habilitar compresión GZIP =====
-<IfModule mod_deflate.c>
-    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
-</IfModule>
-
-# ===== Caché del navegador =====
+# ===== Cache del navegador =====
 <IfModule mod_expires.c>
     ExpiresActive On
     
@@ -36,6 +25,7 @@ RewriteRule ^(.*)$ $1.html [L]
     ExpiresByType image/gif "access plus 1 year"
     ExpiresByType image/svg+xml "access plus 1 year"
     ExpiresByType image/webp "access plus 1 year"
+    ExpiresByType image/x-icon "access plus 1 year"
     
     # CSS y JavaScript
     ExpiresByType text/css "access plus 1 month"
@@ -47,37 +37,56 @@ RewriteRule ^(.*)$ $1.html [L]
     ExpiresByType font/woff2 "access plus 1 year"
     ExpiresByType application/font-woff "access plus 1 year"
     
-    # HTML
+    # PDF
+    ExpiresByType application/pdf "access plus 1 month"
+    
+    # HTML (no cache)
     ExpiresByType text/html "access plus 0 seconds"
 </IfModule>
 
-# ===== Redirigir a HTTPS (SSL) =====
-<IfModule mod_rewrite.c>
-    RewriteEngine On
-    RewriteCond %{HTTPS} off
-    RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+# ===== Compresión GZIP =====
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/html text/plain text/xml text/css text/javascript application/javascript application/json
 </IfModule>
 
-# ===== Redirigir WWW a no-WWW (o viceversa) =====
-# Descomenta para redirigir www a no-www
-# <IfModule mod_rewrite.c>
-#     RewriteEngine On
-#     RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
-#     RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
-# </IfModule>
+# ===== URLs limpias y redirecciones =====
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    
+    # Redirigir a HTTPS (comentado para pruebas locales, descomenta en producción)
+    # RewriteCond %{HTTPS} off
+    # RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    
+    # Redirigir URLs con .html a versiones sin extensión (301 permanente)
+    RewriteCond %{THE_REQUEST} ^GET\ /[^?\s]+\.html
+    RewriteRule ^(.*)\.html$ /$1 [R=301,L,NE]
+    
+    # Agregar .html internamente si el archivo existe
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteCond %{REQUEST_FILENAME}.html -f
+    RewriteRule ^(.*)$ $1.html [L]
+</IfModule>
 
-# ===== Página de error personalizada =====
-ErrorDocument 404 /404.html
-ErrorDocument 500 /500.html
+# ===== Páginas de error personalizadas =====
+# ErrorDocument 404 /404.html
+# ErrorDocument 500 /500.html
 
 # ===== Seguridad =====
 # Prevenir listado de directorios
-Options -Indexes
+<IfModule mod_autoindex.c>
+    Options -Indexes
+</IfModule>
 
 # Proteger archivos sensibles
-<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql)$">
-    Order Allow,Deny
-    Deny from all
+<FilesMatch "\.(htaccess|htpasswd|ini|log|sh|sql|bak)$">
+    <IfModule mod_authz_core.c>
+        Require all denied
+    </IfModule>
+    <IfModule !mod_authz_core.c>
+        Order Allow,Deny
+        Deny from all
+    </IfModule>
 </FilesMatch>
 
 # Headers de seguridad
@@ -94,9 +103,3 @@ Options -Indexes
     # Política de referencia
     Header set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
-
-# ===== UTF-8 encoding =====
-AddDefaultCharset UTF-8
-
-# ===== Configuración de índice =====
-DirectoryIndex index.html index.php
